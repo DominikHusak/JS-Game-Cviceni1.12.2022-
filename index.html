@@ -9,9 +9,18 @@
 <body>
     <h1>JS-Game</h1>
 
-    <label>Enter number<input type="number" class="GuessNum"></label>
+    Enter number<br>
+    <label><input type="number" class="GuessNum"></label>
 
     <button onclick="checkGuess();">Submit</button>
+
+    <p id="Output"></p>
+
+
+    Enter number<br>
+    <label><input type="number" class="ModuloNum"></label>
+
+    <button onclick="Modulo();">Submit</button>
 
     <p id="Output"></p>
 
@@ -30,6 +39,15 @@
             }else{
                 alert("Your guess is not right.")
             }
+        }
+        const a = document.getElementsByClassName("ModuloNum")[0];
+        const modAR = generateNum % a;
+        const resultNum = document.getElementById("OutputMod");
+
+        console.log(a);
+
+        function Modulo(){
+            console.log(modAR);
         }
 
 
